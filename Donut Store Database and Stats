@@ -1,0 +1,61 @@
+/*
+Created by: Lizeth Tapia Garcia
+Create date: 03/23/2023
+Description: Designing a donut store database
+*/
+
+CREATE TABLE 
+donut_store(id INTEGER PRIMARY KEY,name TEXT, quantity INTEGER, filling TEXT, sprinkles TEXT, price INTEGER);
+
+INSERT INTO 
+ donut_store VALUES (1, "Chocolate Donut", 20, "chocolate", "yes", 2.00);
+ 
+INSERT INTO
+ donut_store VALUES (2, "Glazed Donut", 50, "strawberry", "no", 1.09);
+
+INSERT INTO
+ donut_store VALUES (3, "Cherry Donut", 30, "cherry", "no", 1.89);
+
+INSERT INTO
+ donut_store VALUES (4, "Pear Donut", 15, "none", "yes", .98);
+
+INSERT INTO
+ donut_store VALUES (5, "Strawberry Donut", 10, "strawberry", "yes", 1.89);
+
+INSERT INTO
+ donut_store VALUES (6, "Grape Donut", 15, "grape", "no", .98);
+ 
+INSERT INTO
+ donut_store VALUES (7, "Hazelnut Donut", 5, "hazelnut", "yes", 1.89);
+ 
+INSERT INTO
+ donut_store VALUES (8, "Matcha Donut", 10, "vanilla", "no", 2.00);
+ 
+INSERT INTO
+ donut_store VALUES (9, "Peanut Butter Donut", 5, "none", "yes", .98);
+ 
+INSERT INTO
+ donut_store VALUES (10, "Lemon Donut", 15, "none", "yes", 1.09);
+ 
+INSERT INTO
+ donut_store VALUES (11, "Coconut Donut", 20, "chocolate", "no", 2.00);
+
+INSERT INTO
+ donut_store VALUES (12, "Pistachio Donut", 25, "none", "yes", 2.00);
+ 
+INSERT INTO
+ donut_store VALUES (13, "Pumpking Donut", 5, "vanilla", "yes", .98);
+
+INSERT INTO
+ donut_store VALUES (14, "Banana Donut", 10, "chocolate", "yes", 1.89);
+ 
+INSERT INTO
+ donut_store VALUES (15, "Orange Donut", 30, "none", "no", .98);
+
+--display the database ordered by price
+SELECT * FROM donut_store
+ORDER BY price asc;
+
+--what is the average price of a donut?
+SELECT AVG(price) "donut price"
+FROM donut_store
